@@ -1,0 +1,172 @@
+:root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,0.06);
+  --card2: rgba(255,255,255,0.08);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+  --border: rgba(255,255,255,0.12);
+  --accent: #ff2b2b;
+  --shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: radial-gradient(1200px 600px at 20% 0%, rgba(255,43,43,0.18), transparent 55%),
+radial-gradient(1000px 600px at 90% 10%, rgba(0,150,255,0.12), transparent 55%),
+var(--bg); color: var(--text); }
+
+a{ color: inherit; text-decoration: none; }
+.container{ width: min(1100px, 92%); margin: 0 auto; }
+
+/* Header */
+body h1{
+    text-align:center;
+}
+.headingElement{
+position:sticky;
+top:0;
+z-index: 1000;
+margin-top:0px;
+background: rgba(11, 18, 32, 0.95); /* deep dark */
+ backdrop-filter: blur(10px);
+}
+@media (max-width: 768px){
+  .headingElement{
+    position: static; /* removes sticky behavior */
+  }
+}
+
+/* BLOG SECTIONS NAV LIST */
+.blog-sections{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* EACH LIST ITEM */
+.blog-sections li{
+  position: relative;
+}
+
+/* LINK STYLE */
+.blog-sections li a{
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* HOVER EFFECT (premium subtle glow) */
+.blog-sections li a:hover{
+  color: #ffffff;
+  background: rgba(255,255,255,0.06);
+}
+
+/* UNDERLINE ANIMATION (tech blog style) */
+.blog-sections li a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff2b2b, transparent);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.blog-sections li a:hover::after{
+  width: 100%;
+}
+
+/* ACTIVE LINK (optional if you add class="active") */
+.blog-sections li a.active{
+  color: #ffffff;
+}
+
+.blog-sections li a.active::after{
+  width: 100%;
+}
+
+/* IF USED AS SIDEBAR (VERTICAL VERSION) */
+.blog-sections.vertical{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* RESPONSIVE (for mobile header) */
+@media (max-width: 900px){
+  .blog-sections{
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .blog-sections li a{
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+}
+/* INTRODUCTION SECTION (WORD STYLE) */
+.blog-introduction{
+  padding: 60px 0;
+}
+
+/* MAIN BLOG CONTAINER (like Word page) */
+.blog-container{
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 50px 60px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+}
+
+/* INTRODUCTION HEADING (Word-style heading) */
+.blog-container h2{
+  font-family: "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-align: left;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  padding-bottom: 8px;
+}
+
+/* PARAGRAPH (ACADEMIC WORD STYLE) */
+.blog-container p{
+  font-family: "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.88);
+  text-align: justify;
+  margin-bottom: 18px;
+}
+
+/* FIRST PARAGRAPH DROP SPACING LIKE ESSAY */
+.blog-container p:first-of-type{
+  margin-top: 10px;
+}
+
+/* RESPONSIVE (important for marks) */
+@media (max-width: 768px){
+  .blog-container{
+    padding: 35px 25px;
+  }
+
+  .blog-container h2{
+    font-size: 24px;
+  }
+
+  .blog-container p{
+    font-size: 16px;
+  }
+}
