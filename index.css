@@ -146,7 +146,7 @@ background: rgba(11, 18, 32, 0.95); /* deep dark */
   font-family: "Times New Roman", serif;
   font-size: 17px;
   line-height: 1.9;
-  color: rgba(255,255,255,0.88);
+  color: #ffffff;
   text-align: justify;
   margin-bottom: 18px;
 }
@@ -169,4 +169,23 @@ background: rgba(11, 18, 32, 0.95); /* deep dark */
   .blog-container p{
     font-size: 16px;
   }
+}
+html{
+  scroll-behavior: smooth;
+}
+.blog-section{
+  transition: all 0.1s ease;
+  scroll-margin-top: 100px;
+  padding:10px 0;
+  width:75vw;
+  margin:auto;
+}
+.blog-section:hover{
+  transform: scale(1.02);
+  padding:25px 0;
+}
+.blog-section:hover .blog-container {
+  background: rgba(255,255,255,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.15);
 }
